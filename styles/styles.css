@@ -6,13 +6,13 @@
 }
 
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: #27AE60;
+  --color-primary: #1C1C1C;
+  --color-secondary: #0000ff;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
-  --color-grey-2: #b2becd;
+  --color-grey-2: #D3D3D3;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
@@ -22,16 +22,16 @@
 }
 
 .light-mode {
-  --color-primary: #FFFFFF;
-  --color-secondary: #F56692;
-  --color-white: #454e56;
-  --color-black: #000;
-  --color-grey0: #f8f8f8;
-  --color-grey-1: #6c7983;
-  --color-grey-2: #6c7983;
-  --color-grey-3: #6c7983;
+  --color-primary: #ffffff;
+  --color-secondary: #0000ff;
+  --color-white: #000000;
+  --color-black: #DCDCDC;
+  --color-grey0: #FFFFFF;
+  --color-grey-1: #000000;
+  --color-grey-2: #D3D3D3;
+  --color-grey-3: #ffffff;
   --color-grey-4: #454e56;
-  --color-grey-5: #f8f8f8;
+  --color-grey-5: #DCDCDC;
   --color-grey-6: #12181b;
 }
 
@@ -290,7 +290,7 @@ section {
   align-items: center;
 }
 .about-stats .progress-bars .progress-bar .progress-con .prog-text {
-  color: var(--color-grey-2);
+  color: var(--color-white);
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress {
   width: 100%;
@@ -312,19 +312,19 @@ section {
   width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 95%;
+  width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
   width: 75%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 60%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
+  width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 70%;
+  width: 92%;
 }
 
 .stat-title {
@@ -344,6 +344,38 @@ section {
   background-color: var(--color-grey-5);
   transform: translateX(-50%);
 }
+.about-stats2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem; /* Espaçamento entre as colunas */
+}
+
+.about-stats2 .left-about2 {
+padding-right: 5rem;
+}
+.about-stats2 .left-about2 p {
+line-height: 1.5rem;
+padding: 1rem;
+color: var(--color-grey-1);
+}
+.about-stats2 .left-about2 h4 {
+font-size: 1.5rem;
+text-transform: capitalize;
+}
+
+.about-stats2 .right-about2 {
+padding-right: 5rem;
+}
+.about-stats2 .right-about2 p {
+line-height: 1.5rem;
+padding: 1rem;
+color: var(--color-grey-1);
+}
+.about-stats2 .right-about2 h4 {
+font-size: 1.5rem;
+text-transform: capitalize;
+}
+
 
 /*Timeline*/
 .timeline {
@@ -576,10 +608,10 @@ section {
   transition: all 0.4s ease-in-out;
 }
 .contact-content-con .left-contact .contact-icon a:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-white);
 }
 .contact-content-con .left-contact .contact-icon a:hover i {
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 .contact-content-con .left-contact .contact-icon a i {
   display: flex;
@@ -961,4 +993,66 @@ section {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.about-container2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+  .right-about2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+  }
+      .about-item2 {
+          border: 1px solid var(--color-grey-5);
+          border-radius: 5px;
+          transition: all .4s ease-in-out;
+          box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+          &:hover {
+              cursor: default;
+              transform: translateY(-5px);
+              border: 1px solid var(--color-secondary);
+              box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+          }
+          .abt-text2 {
+              padding: 2rem;
+              display: flex;
+              flex-direction: column;
+              .large-text2 {
+                  font-size: 2rem;
+                  font-weight: 600;
+                  color: var(--color-secondary);
+              }
+              .small-text2 {
+                  padding-left: 1rem;
+                  position: relative;
+                  text-transform: capitalize;
+                  font-size: 1rem;
+                  color: var(--color-grey-1);
+                  letter-spacing: 1px;
+                  &::before {
+                      content: '';
+                      position: absolute;
+                      left: 0;
+                      top: 15px;
+                      width: 0rem;
+                      height: 0px;
+                      background-color: var(--color-grey-5);
+                  }
+              }
+          }
+      }
+
+  .left-about2 {
+      padding-right: 5rem;
+      p {
+          line-height: 2rem;
+          padding: 1rem;
+          color: var(--color-grey-1);
+      }
+      h4 {
+          font-size: 2rem;
+          text-transform: uppercase;
+      }
+  }
