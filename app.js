@@ -14,14 +14,14 @@
 
 
 // Função para enviar o e-mail
-function enviarEmail() {
+function enviarEmail1() {
     const form = document.getElementById("meu-formulario");
     const mensagemConfirmacao = document.querySelector(".mensagem-confirmacao");
     const errorEmail = document.getElementById("error-email");
     const email = form.elements["email"].value;
 
     // Verifica se todos os campos obrigatórios estão preenchidos
-    if (!camposPreenchidos(form)) {
+    if (!camposPreenchidos1(form)) {
         alert("Preencha todos os campos!");
         return;
     }
@@ -39,6 +39,7 @@ function enviarEmail() {
         nome: form.elements["nome"].value,
         email: email,
         assunto: form.elements["assunto"].value,
+        telefone: form.elements["telefone"].value,
         mensagem: form.elements["mensagem"].value
     }).then(
         function (response) {
@@ -61,9 +62,9 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 // Função para verificar se todos os campos obrigatórios estão preenchidos
-function camposPreenchidos(form) {
-    const camposObrigatorios = ["nome", "email", "assunto", "mensagem"];
-    for (const campo of camposObrigatorios) {
+function camposPreenchidos1(form) {
+    const camposObrigatorios1 = ["nome", "email", "assunto", "telefone", "mensagem"];
+    for (const campo of camposObrigatorios1) {
         if (!form.elements[campo].value.trim()) {
             return false;
         }
