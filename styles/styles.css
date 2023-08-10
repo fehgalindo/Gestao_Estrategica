@@ -665,6 +665,7 @@ text-transform: capitalize;
   display: flex;
   align-self: flex-start;
   align-items: center;
+  cursor: pointer;
   overflow: hidden;
 }
 .main-btn .btn-text {
@@ -699,8 +700,8 @@ text-transform: capitalize;
 }
 /* Estilo para o botão de envio de e-mail */
 .submit-btn {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  align-self: flex-start;
 }
 
 /* Estilo para o botão de envio */
@@ -714,6 +715,7 @@ text-transform: capitalize;
   cursor: pointer;
   font-size: 15px;
   overflow: hidden;
+  transition: all 300ms ease-in-out;
 }
 
 /* Estilo para o ícone do botão */
@@ -728,28 +730,11 @@ text-transform: capitalize;
 
 /* Estilo para o texto do botão */
 .submit-btn button .btn-text {
-  padding: 0 2rem;
+  padding: 1rem;
 }
 /* Estilo de transição para o efeito hover */
 .submit-btn button:hover {
-  transition: all 0.4s ease-out;
-}
-/* Estilo do efeito hover - antes */
-.submit-btn button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
-  background-color: var(--color-primary); /* Cor de fundo personalizada */
-  transition: all 0.4s ease-out;
-  z-index: -1;
-}
-
-/* Estilo do efeito hover - durante */
-.submit-btn button:hover::before {
-  width: 100%;
-  height: 100%;
+  transition: all 300ms ease-out;
   background-color: var(--color-secondary); /* Cor de fundo personalizada */
   transform: translateX(0);
   transition: all 0.4s ease-out;
