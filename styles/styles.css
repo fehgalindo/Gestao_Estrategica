@@ -6,30 +6,30 @@
 }
 
 :root {
-  --color-primary: #1C1C1C;
-  --color-secondary: #0000ff;
-  --color-white: #FFFFFF;
-  --color-black: #000;
-  --color-grey0: #f8f8f8;
-  --color-grey-1: #dbe1e8;
+  --color-primary: #e7e7e7;
+  --color-secondary: #0000ffe5;
+  --color-white: #000000;
+  --color-black: #DCDCDC;
+  --color-grey0: #e7e7e7;
+  --color-grey-1: #000000;
   --color-grey-2: #D3D3D3;
-  --color-grey-3: #6c7983;
+  --color-grey-3: #e7e7e7;
   --color-grey-4: #454e56;
-  --color-grey-5: #2a2e35;
+  --color-grey-5: #DCDCDC;
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
 .light-mode {
-  --color-primary: #ffffff;
-  --color-secondary: #0000ff;
+  --color-primary: #e7e7e7;
+  --color-secondary: #0000ffe5;
   --color-white: #000000;
   --color-black: #DCDCDC;
-  --color-grey0: #FFFFFF;
+  --color-grey0: #e7e7e7;
   --color-grey-1: #000000;
   --color-grey-2: #D3D3D3;
-  --color-grey-3: #ffffff;
+  --color-grey-3: #e7e7e7;
   --color-grey-4: #454e56;
   --color-grey-5: #DCDCDC;
   --color-grey-6: #12181b;
@@ -687,9 +687,11 @@ text-transform: capitalize;
   transform: translateX(100%);
   transition: all 0.4s ease-out;
   z-index: -1;
+  color: #FFFFFF;
 }
 .main-btn:hover {
   transition: all 0.4s ease-out;
+  color: #FFFFFF;
 }
 .main-btn:hover::before {
   width: 100%;
@@ -697,6 +699,7 @@ text-transform: capitalize;
   background-color: var(--color-secondary);
   transform: translateX(0);
   transition: all 0.4s ease-out;
+  color: #FFFFFF;
 }
 /* Estilo para o botão de envio de e-mail */
 .submit-btn {
@@ -738,6 +741,7 @@ text-transform: capitalize;
   background-color: var(--color-secondary); /* Cor de fundo personalizada */
   transform: translateX(0);
   transition: all 0.4s ease-out;
+  color: #FFFFFF;
 }
 
 .main-title {
@@ -1099,10 +1103,14 @@ text-transform: capitalize;
       }
   }
   .circles-container {
+    width: 800px;
+    height: 400px;
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    background: var(--color-primary);
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   
   .circle-top {
@@ -1110,11 +1118,10 @@ text-transform: capitalize;
     height: 200px;
     background-color: #c8c8c8;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
+    display: grid;
+    place-items: center;
   }
 
   .circle-bottom-left {
@@ -1122,11 +1129,10 @@ text-transform: capitalize;
     height: 200px;
     background-color: #a1a1a1;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
+    display: grid;
+    place-items: center;
   }
   
   .circle-bottom-right {
@@ -1134,23 +1140,28 @@ text-transform: capitalize;
     height: 200px;
     background-color: #5d5d5d;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
+    display: grid;
+    place-items: center;
   }
 
   .circle-bottom-left {
     position: absolute;
-    top: 200px;
-    left: 280px;
+    bottom: 6%;
+    left: 24%;
   }
-  
   .circle-bottom-right {
     position: absolute;
-    top: 200px;
-    left: 490px;
+    bottom: 6%;
+    right: 25%;
+  }
+  
+  .circle-top  {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .circle-text {
@@ -1160,34 +1171,34 @@ text-transform: capitalize;
   
   .center-icon {
     position: absolute;
-    top: 200px;
-    left: 460px;
     background-color: var(--color-secondary);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    top: 53%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
   }
   
   .center-text {
     position: absolute;
-    top: 110px;
-    left: 79%;
-    transform: translateX(-50%);
     font-weight: bold;
     font-size: 2rem;
     color: var(--color-secondary);
+    top: 30%;
+    right: -12%;
+    transform: translate(-50%, -50%);
   }
   .circles-container::before {
     content: "";
     position: absolute;
-    top: 180px;
-    left: 505px;
-    width: 160px;
-    height: 2px;
+    width: 110px;
+    height: 1px;
     background-color: var(--color-secondary);
+    top: 40%;
+    right: 32%;
     transform: rotate(150deg);
   }
 
